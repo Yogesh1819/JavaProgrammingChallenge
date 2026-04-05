@@ -2,28 +2,39 @@ import java.util.Scanner;
 
 public class practiceClass
 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number : ");
-        int num=sc.nextInt();
-        System.out.println("Here is your fibonacci series : ");
-        fibonacciSeries(num);
-    }
-
-    public static void fibonacciSeries(int num)
+    public static void main(String[] args)
     {
-       int i=2;
 
-       int first=0;
-       int second=1;
+        int[] numArray=ArrayDec.inputArray();
+        long sum=sumofArray(numArray);
+        System.out.println("Sum of array is " + sum);
+        double Avg=avgOfArray(numArray);
+        System.out.println("AVerage of array is " + Avg);
 
-       while(i<=num)
-       {
-           int third=first+second;
-           System.out.println(third + " ");
-           first=second;
-           second=third;
-           i++;
-       }
+
+
     }
+
+
+    public static long sumofArray(int[]numArray)
+    {
+     int sum=0;
+     int i=0;
+     while(i<numArray.length)
+     {
+         sum=numArray[i]+sum;
+         i++;
+     }
+
+        return sum;
+    }
+
+    public static double avgOfArray(int []numArray)
+    {
+        double Avg=sumofArray(numArray);
+        return (Avg/numArray.length);
+
+    }
+
+
 }
