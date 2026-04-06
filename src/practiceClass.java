@@ -5,12 +5,16 @@ public class practiceClass
     public static void main(String[] args)
     {
 
+        /*
         int[] numArray=ArrayDec.inputArray();
         long sum=sumofArray(numArray);
         System.out.println("Sum of array is " + sum);
         double Avg=avgOfArray(numArray);
         System.out.println("AVerage of array is " + Avg);
+        */
 
+        int[][]numArray=ArrayDec.input2DArray();
+        ArrayDec.display2DArray(numArray);
 
 
     }
@@ -33,7 +37,6 @@ public class practiceClass
     {
         double Avg=sumofArray(numArray);
         return (Avg/numArray.length);
-
     }
 
 

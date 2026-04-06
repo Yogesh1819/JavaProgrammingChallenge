@@ -35,4 +35,48 @@ public class ArrayDec
         System.out.println();
 
     }
+
+    public static void display2DArray(int[][]newArray)
+    {
+      int i=0;
+      while (i<newArray.length)
+      {
+          int j=0;
+          while (j<newArray[i].length)
+          {
+              System.out.print(newArray[i][j]+" ");
+              j++;
+          }
+          System.out.println();
+          i++;
+      }
+
+    }
+
+
+    public static int[][] input2DArray()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter no of rows :");
+        int rows = sc.nextInt();
+        System.out.print("Enter no of coloumn :");
+        int coloumn=sc.nextInt();
+
+        int [][] newArray=new int[rows][coloumn];
+
+        int i=0;
+        while(i<newArray.length)
+        {
+          int j=0;
+          while(j<newArray[i].length)
+          {
+              System.out.print("Enter element at row :"+(i+1)+ ",column "+(j+1)+ " :");
+              newArray[i][j]=sc.nextInt();
+               j++;
+          }
+          i++;
+        }
+        return newArray;
+
+    }
 }
